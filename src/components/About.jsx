@@ -55,7 +55,7 @@ const About = () => {
       <motion.img
         src={profilePic}
         alt="Profile"
-        variants={fadeIn('left', '', 0.2, 1)}
+        variants={fadeIn('right', '', 0.2, 1)}
         className="w-40 h-40 rounded-full object-cover border-4 border-[#b5a49e] shadow-lg cursor-pointer"
         whileHover={{ scale: 1.05 }}
         transition={{ type: 'spring', stiffness: 300 }}
