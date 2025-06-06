@@ -61,6 +61,7 @@ const CatsCanvas = () => {
           minPolarAngle={Math.PI / 2}
           autoRotate
           autoRotateSpeed={-1} 
+          enablePan={false}
         />
         <Cats isMobile={isMobile}/>
       </Suspense>
