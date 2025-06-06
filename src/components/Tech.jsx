@@ -40,7 +40,7 @@ const innerContainerStyle = {
 };
 
 const CARD_WIDTH = 170; // width (150px) + margin (20px)
-const DURATION = 50;
+const DURATION = 30;
 const TOTAL_WIDTH = technologies.length * CARD_WIDTH;
 
 const Tech = () => {

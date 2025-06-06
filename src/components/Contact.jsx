@@ -97,6 +97,20 @@ const Contact = () => {
           alignSelf: 'flex-start',
         }}
       >
+
+        <div 
+          style={{
+            position: 'absolute',
+            top: '4px',
+            left: '4px',
+            right: '4px',
+            bottom: '4px',
+            border: '2px dashed rgba(255, 255, 255, 0.2)',
+            borderRadius: '16px',
+            pointerEvents: 'none',
+          }}
+        />
+        
         <p className={styles.sectionSubText} style={{color: "#B5A49E"}}>Get in touch</p>
         <h3 className={styles.sectionHeadText} style={{color: "white"}}>Contact</h3>
       

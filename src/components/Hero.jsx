@@ -15,8 +15,8 @@ const Hero = () => {
       <div className="flex flex-col justify-center items-center mt-5"> 
         </div>
         <div>
-          <h2 className={styles.sectionHeadText} style={{ color: '#534039' }}>Take Care!</h2>
-          <p className={styles.sectionSubText} style={{ color: '#534039' }}>Thank you for stopping by</p>
+          <h2 className={styles.sectionHeadText} style={{ color: '#534039' }}>Take Care</h2>
+          <p className={styles.sectionSubText} style={{ color: '#534039' }}>Thank you for stopping by!</p>
         </div>
     </div>
 

@@ -1,4 +1,4 @@
-import { MagicCanvas, BallCanvas, CatsCanvas, StarsCanvas } from './canvas';
+import { MagicCanvas, CatsCanvas, StarsCanvas } from './canvas';
 import Hero from './Hero';
 import Navbar from './Navbar';
 import About from './About';
@@ -17,7 +17,6 @@ export {
   Works,
   Contact,
   MagicCanvas, 
-  BallCanvas, 
   CatsCanvas, 
   StarsCanvas,
   ScrollToTopButton
