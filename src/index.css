@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+/* Add this to your global styles */
+::placeholder {
+  color: #55433c !important;
+  opacity: 1 !important;
+}
+
+.hash-span {
+  margin-top: -100px;
+  padding-bottom: 100px;
+  display: block;
+}
+
+/* Updated gradients using your color palette */
+.brown-gradient {
+  background: #534039; /* Brown color from palette */
+  background: -webkit-linear-gradient(
+    to right,
+    #534039,
+    #7a645c
+  );
+  background: linear-gradient(
+    to right,
+    #534039,
+    #7a645c
+  );
+}
+
+.black-gradient {
+  background: #181925; /* Dark color from palette */
+  background: -webkit-linear-gradient(
+    to right,
+    #1C2A53,
+    #181925
+  );
+  background: linear-gradient(
+    to right,
+    #1C2A53,
+    #181925
+  );
+}
+
+.violet-gradient {
+  background: #1C2A53;
+  background: linear-gradient(-90deg, #1C2A53 0%, rgba(28, 42, 83, 0.5) 100%);
+  background: -webkit-linear-gradient(
+    -90deg,
+    #1C2A53 0%,
+    rgba(28, 42, 83, 0.5) 100%
+  );
+}
+
+.green-pink-gradient {
+  background: #C9CACC;
+  background: linear-gradient(90.13deg, #C9CACC 1.9%, #1C2A53 97.5%);
+  background: -webkit-linear-gradient(-90.13deg, #C9CACC 1.9%, #1C2A53 97.5%);
+}
+
+/* Updated text gradients */
+.orange-text-gradient {
+  background: #1C2A53;
+  background: -webkit-linear-gradient(
+    to top,
+    #1C2A53,
+    #C9CACC
+  );
+  background: linear-gradient(
+    to top,
+    #1C2A53,
+    #C9CACC
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brown-text-gradient {
+  background: #534039;
+  background: -webkit-linear-gradient(
+    to top,
+    #534039,
+    #534039
+  );
+  background: linear-gradient(
+    to top,
+    #534039,
+    #534039
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.green-text-gradient {
+  background: #1C2A53;
+  background: -webkit-linear-gradient(
+    to top,
+    #1C2A53,
+    #F1EFED
+  );
+  background: linear-gradient(
+    to top,
+    #1C2A53,
+    #F1EFED
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blue-text-gradient {
+  background: #1C2A53;
+  background: -webkit-linear-gradient(
+    to top,
+    #1C2A53,
+    #C9CACC
+  );
+  background: linear-gradient(
+    to top,
+    #1C2A53,
+    #C9CACC
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.pink-text-gradient {
+  background: #F1EFED;
+  background: -webkit-linear-gradient(
+    to top,
+    #F1EFED,
+    #C9CACC
+  );
+  background: linear-gradient(
+    to top,
+    #F1EFED,
+    #C9CACC
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* canvas- styles - updated to use palette colors */
+.canvas-loader {
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: relative;
+  text-indent: -9999em;
+  animation: mulShdSpin 1.1s infinite ease;
+  transform: translateZ(0);
+}
+
+@keyframes mulShdSpin {
+  0%,
+  100% {
+    box-shadow: 0em -2.6em 0em 0em #F1EFED,
+      1.8em -1.8em 0 0em rgba(241, 239, 237, 0.2),
+      2.5em 0em 0 0em rgba(241, 239, 237, 0.2),
+      1.75em 1.75em 0 0em rgba(241, 239, 237, 0.2),
+      0em 2.5em 0 0em rgba(241, 239, 237, 0.2),
+      -1.8em 1.8em 0 0em rgba(241, 239, 237, 0.2),
+      -2.6em 0em 0 0em rgba(241, 239, 237, 0.5),
+      -1.8em -1.8em 0 0em rgba(241, 239, 237, 0.7);
+  }
+  12.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(241, 239, 237, 0.7),
+      1.8em -1.8em 0 0em #F1EFED, 2.5em 0em 0 0em rgba(241, 239, 237, 0.2),
+      1.75em 1.75em 0 0em rgba(241, 239, 237, 0.2),
+      0em 2.5em 0 0em rgba(241, 239, 237, 0.2),
+      -1.8em 1.8em 0 0em rgba(241, 239, 237, 0.2),
+      -2.6em 0em 0 0em rgba(241, 239, 237, 0.2),
+      -1.8em -1.8em 0 0em rgba(241, 239, 237, 0.5);
+  }
+  25% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.5),
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.7), 2.5em 0em 0 0em #F1EFED,
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  37.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.7), 1.75em 1.75em 0 0em #F1EFED,
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.5),
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.7), 0em 2.5em 0 0em #F1EFED,
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  62.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.5),
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.7), -1.8em 1.8em 0 0em #F1EFED,
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  75% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.5),
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.7), -2.6em 0em 0 0em #F1EFED,
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  87.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.5),
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #F1EFED;
+  }
+}
