@@ -39,7 +39,7 @@ const innerContainerStyle = {
   top: 0,
 };
 
-const CARD_WIDTH = 170; // width (150px) + margin (20px)
+const CARD_WIDTH = 170; 
 const DURATION = 30;
 const TOTAL_WIDTH = technologies.length * CARD_WIDTH;
 
@@ -49,16 +49,13 @@ const Tech = () => {
   const topAnimationRef = useRef(null);
   const bottomAnimationRef = useRef(null);
   
-  // Split technologies into two groups
   const halfLength = Math.ceil(technologies.length / 2);
   const topTechnologies = technologies.slice(0, halfLength);
   const bottomTechnologies = technologies.slice(halfLength);
   
-  // Create duplicated arrays for seamless animation
   const duplicatedTopTech = [...topTechnologies, ...topTechnologies];
   const duplicatedBottomTech = [...bottomTechnologies, ...bottomTechnologies];
   
-  // Calculate total widths based on each technology set
   const TOP_TOTAL_WIDTH = topTechnologies.length * CARD_WIDTH;
   const BOTTOM_TOTAL_WIDTH = bottomTechnologies.length * CARD_WIDTH;
 
@@ -89,7 +86,6 @@ const Tech = () => {
       bottomAnimationRef.current = requestAnimationFrame(startBottomAnimation);
     };
 
-    // Set initial positions
     topControls.set({ x: 0 });
     bottomControls.set({ x: -BOTTOM_TOTAL_WIDTH });
 

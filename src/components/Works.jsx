@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 import { fadeIn, textVariant } from '../utils/motion'  
 import { github } from '../assets'
 
+{/* Project Cards */}
 const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
   return (
     <motion.div
@@ -18,13 +19,15 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
       {/* Dashed border effect */}
       <div className="absolute inset-2 rounded-xl border-2 border-dashed border-white/20 pointer-events-none"></div>
       
-      <div className="relative w-full h-[230px] z-10">
+      {/* Project Image */}
+      <div className="relative w-full h-[180px] z-10">
         <img
           src={image}
           alt={name}
-          className="w-full h-full object-cover rounded-2xl"
+          className="w-full h-full rounded-md"
         />
 
+        {/* GitHub Icon */}
         <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
           <motion.div
             onClick={() => window.open(source_code_link, "_blank")}
@@ -41,6 +44,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
         </div>
       </div>
 
+      {/* Project Details */}
       <div className="mt-5 flex flex-col z-10">
         <h3 className="text-[24px] font-bold" style={{ color: '#534039' }}>{name}</h3>
         <p className="text-white text-[16px] mt-2">{description}</p>
@@ -61,12 +65,14 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
 
 const Works = () => {
   return (
-    <>
+    <> 
+      {/* Section Header */}  
       <motion.div variants = {textVariant()}>
         <h2 className={styles.sectionHeadText}  style={{ color: '#534039' }}>Projects</h2>
         <p className={styles.sectionSubText} style={{ color: '#6c534a' }}>My work</p>
       </motion.div>
       
+      {/* Projects Grid */}
       <div className="mt-20 flex flex-wrap gap-7">
         {projects.map((project, index) => (
           <ProjectCard

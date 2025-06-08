@@ -31,6 +31,7 @@ const timelineStyles = `
 const Experience = () => {
   return (
     <>   
+      {/* Timeline Styles */}
       <style>{timelineStyles}</style>
       <motion.div variants={textVariant()}>
         <h2 className={styles.sectionHeadText} style={{ color: '#534039' }}>Work Experience</h2>

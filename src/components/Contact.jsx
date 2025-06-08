@@ -12,7 +12,7 @@ const Contact = () => {
   const magicContainerRef = useRef(null);
   const [formHeight, setFormHeight] = useState('auto');
 
-  // Sync heights when form changes
+  {/* Sync heights when form changes */}
   useEffect(() => {
     const updateHeight = () => {
       if (formContainerRef.current && magicContainerRef.current) {
@@ -21,7 +21,7 @@ const Contact = () => {
       }
     };
 
-    // Initial height set
+    // {/* Initial height set */}
     updateHeight();
 
     // Create observer to watch for height changes
@@ -87,6 +87,7 @@ const Contact = () => {
 
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden items-start">
+      {/* Contact Form Section */}
       <motion.div
         ref={formContainerRef}
         variants={slideIn('left', "tween", 0.2, 1)}
@@ -110,17 +111,18 @@ const Contact = () => {
             pointerEvents: 'none',
           }}
         />
-        
+        {/* Contact Form */}
         <p className={styles.sectionSubText} style={{color: "#B5A49E"}}>Get in touch</p>
         <h3 className={styles.sectionHeadText} style={{color: "white"}}>Contact</h3>
-      
+          
         <form
           ref={formRef}
           onSubmit={handleSubmit}
           className="mt-12 flex flex-col gap-8"
-          style={{ minWidth: '100%' }} // Ensure form takes full width
+          style={{ minWidth: '100%' }} 
         >
           
+           {/* Name Input */}
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Name</span>
             <input
@@ -133,7 +135,8 @@ const Contact = () => {
               style={{ background: "#A0897F" }}
             />
           </label>
-
+          
+           {/* Email Input */}
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Email</span>
             <input
@@ -146,7 +149,8 @@ const Contact = () => {
               style={{ background: "#A0897F" }}
             />
           </label>
-
+          
+           {/* Message Textarea */}
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Message</span>
             <textarea
@@ -158,11 +162,12 @@ const Contact = () => {
               className="py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium resize-y" // Added resize-y
               style={{ 
                 background: "#A0897F",
-                minHeight: '150px', // Set a minimum height
+                minHeight: '150px', 
               }}
             />
           </label>
 
+           {/* Submit Button */}
           <motion.button
             type="submit"
             className="py-3 px-8 outline-none w-fit text-[#fff] font-bold rounded-xl text-xl"
@@ -174,15 +179,16 @@ const Contact = () => {
           </motion.button>
         </form>
       </motion.div>
-
+      
+      {/* Magic Canvas Section */}
       <motion.div
         ref={magicContainerRef}
         variants={slideIn('right', "tween", 0.2, 1)}
         className="xl:flex-1 rounded-3xl overflow-hidden"
         style={{ 
           height: formHeight,
-          minHeight: '350px', // Mobile fallback
-          maxHeight: '800px', // Optional maximum
+          minHeight: '350px', 
+          maxHeight: '800px', 
         }}
       >
         <MagicCanvas />

@@ -7,8 +7,10 @@ import { fadeIn, textVariant } from '../utils/motion';
 import { SectionWrapper } from '../hoc';
 import profilePic from '../assets/profilePic.jpg'; // Adjust the path as necessary
 
+{/* Service Cards */}
 const ServiceCard = ({ index, title, icon }) => {
   return (
+    
     <Tilt className="xs:w-[250px] w-full">
       <motion.div
         variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}
@@ -50,7 +52,7 @@ const About = () => {
           <b>About Me</b>
         </h2>
       </motion.div>
-
+      
       <div className="mt-4 flex flex-col md:flex-row items-center gap-8">
       <motion.img
         src={profilePic}
